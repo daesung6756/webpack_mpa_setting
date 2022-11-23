@@ -1,0 +1,11 @@
+/* -----------------------------------------------------------------------------
+   Font
+----------------------------------------------------------------------------- */
+
+/* 국문 */
+@font-face {
+    font-family: 'HankookMain';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/clientlib-base/resources/font/HankookKRLight.woff2') format('woff2');
+}

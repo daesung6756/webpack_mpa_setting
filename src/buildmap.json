@@ -1,0 +1,5 @@
+[
+
+  { "type":"common" ,"path": "/index.html", "component": "test" },
+  { "type":"common" ,"path": "/index.html", "component": "test2" }
+]

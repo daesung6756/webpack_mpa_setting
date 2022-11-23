@@ -1,0 +1,46 @@
+{
+  "name": "webpack_mpa_setting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "dist": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daesung6756/webpack_mpa_setting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daesung6756/webpack_mpa_setting/issues"
+  },
+  "homepage": "https://github.com/daesung6756/webpack_mpa_setting#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.2",
+    "file-loader": "^6.2.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.7.7",
+    "handlebars-layouts": "^3.1.4",
+    "handlebars-loader": "^1.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "path": "^0.12.7",
+    "replace-in-file-webpack-plugin": "^1.0.6",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {}
+}
