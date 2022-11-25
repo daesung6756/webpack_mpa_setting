@@ -1,0 +1,71 @@
+{{# jsonBlock 'carousel'}}
+    [
+        {
+            "video": true,
+            "video-pc": "/main/ion_teaser_0331",
+            "video-mo": "/main/ion_teaser_0331",
+            "poster-pc": "/main/kv-01.jpg",
+            "poster-mo": "/main/kv-01.jpg",
+            "title": "이곳은 제목입니다.",
+            "tags": ["#태그1", "#태그2", "#태그3"]
+        },
+        {
+            "video": false,
+            "img-pc": "/main/kv-01.jpg",
+            "img-mo": "/main/kv-01.jpg",
+            "title": "이곳은 제목입니다.",
+            "tags": ["#태그1", "#태그2", "#태그3"],
+            "more-src": "sdsdsdsd.com"
+        }
+    ]
+{{/jsonBlock}}
+<section class="keyvisual-home-carousel">
+
+    <div class="home-swiper">
+        <div class="swiper-wrapper">
+            {{#each carousel}}
+                <div class="home-swiper-item swiper-slide">
+                    {{#if video}}
+                        <video
+                                src="{{video-pc}}"
+                                poster="{{poster-pc}}"
+                                class=""
+                                muted
+                                playsinline
+                                autoplay
+                                loop></video>
+                        <video
+                                src="{{video-mo}}"
+                                poster="{{poster-mo}}"
+                                class=""
+                                muted
+                                playsinline
+                                autoplay
+                                loop></video>
+                    {{else}}
+                        <img src="{{img-pc}}" alt="" class="">
+                        <img src="{{img-mo}}" alt="" class="">
+                    {{/if}}
+                    {{#if title}}
+                    <div class="content">
+                        {{#if tags}}
+                        <ul class="tags font_body_3">
+                            {{#each tags}}
+                                <li>{{{this}}}</li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                        <h2 class="h2 title font_headline_1">{{{title}}}</h2>
+                    </div>
+                    {{/if}}
+                    {{# if more-src}}
+                    <a class="btn btn--round" href="{{more-src}}">Learn more</a>
+                    {{/if}}
+                    <div class="progress"><div class="thumb"></div></div>
+                </div>
+            {{/each}}
+        </div>
+        <div class="home-swiper-pagination swiper-pagination"></div>
+    </div>
+
+</section>

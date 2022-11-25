@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// base
+@import "./base";
+@import "/src/assets/clientlib-base/scss/base";
+
+// part
+@import "header";
+@import "footer";

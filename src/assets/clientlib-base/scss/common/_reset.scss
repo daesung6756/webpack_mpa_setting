@@ -1,0 +1,334 @@
+// -----------------------------------------------------------------------------
+// Element Style Reset
+// -----------------------------------------------------------------------------
+
+:root {
+  --full-height: 100vh;
+}
+
+html {
+  background-color: #fff;
+  font-size: 62.5%; // 10px
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  @include break-word;
+
+  @include mq($until: $w-small - 1) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  min-width: 280px;
+  margin: 0;
+  width: 100%;
+  font-size: 1em;
+  font-family: "Hankook", "HankookMain", sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+// HTML5 display-role reset for older browsers
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+ol,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  height: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  // box-sizing: content-box;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+}
+td {
+  vertical-align: middle;
+}
+
+em {
+  color: $color-primary-deep;
+}
+
+small {
+  font-size: 80%;
+}
+
+// Add the correct display in IE 9-.
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+
+  // 국문일 경우 여기서 break-word 값을 지정해주는 것이 좋다.
+  @include break-word;
+}
+
+// 국문일 경우 여기서 break-word 값을 지정해주는 것이 좋다.
+// word-break: keep-all;
+// word-wrap: break-word;
+p {
+  @include break-word;
+}
+
+a {
+  // color: $ink;
+  color: #010101;
+  text-decoration: none;
+  background-color: transparent;
+
+  // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  -webkit-text-decoration-skip: objects;
+}
+
+iframe {
+  border: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+// summary {
+//   display: list-item;
+// }
+
+::selection {
+  // background: $color-primary;
+  // color: $white;
+  // text-shadow: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+input,
+textarea,
+button,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// 자주 안 쓰는 요소
+// -----------------------------------------------------------------------------
+// 사용할 경우 주석 해제
+
+// abbr[title] {
+//   // Remove the bottom border in Chrome 57- and Firefox 39-.
+//   border-bottom: none;
+
+//   text-decoration: underline; /* 2 */
+//   text-decoration: underline dotted; /* 2 */
+// }
+
+// code,
+// kbd,
+// samp {
+//   font-family: monospace, monospace;
+//   font-size: 1em;
+// }
+
+// mark {
+//   background-color: #ff0;
+//   color: #000;
+// }
+
+// pre {
+//   white-space: pre-wrap;
+//   word-wrap: break-word;
+// }
+
+// sup {
+//   vertical-align:text-top;
+// }
+// sub {
+//   vertical-align:text-bottom;
+// }
+// sub,
+// sup {
+//   font-size: 75%;
+//   line-height: 0;
+//   position: relative;
+//   vertical-align: baseline;
+// }
+// sub { bottom: -0.25em; }
+// sup { top: -0.5em; }
+
+
+[lang="zh"], [lang="ja"]{
+  html{
+    word-break: normal;
+  }
+
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  word-break: normal;
+}
+
+p{
+  word-break: normal;
+}
+}
+
+
+
+

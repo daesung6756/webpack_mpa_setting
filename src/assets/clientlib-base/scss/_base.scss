@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import "./common/button";
+@import "./common/component";
+@import "./common/font";
+@import "./common/function";
+@import "./common/helper";
+@import "./common/mixin";
+@import "./common/reset";
+@import "./common/text";
+@import "./common/var";
+
+// vendors
+@import "~locomotive-scroll/dist/locomotive-scroll";
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+// cendors add-on
+@import "./vendor/swiper";
+@import "./vendor/locomotive-scroll";

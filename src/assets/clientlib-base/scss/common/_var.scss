@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// Variable
+// -----------------------------------------------------------------------------
+// breakpoints
+$mq-breakpoints: (
+  small: 560px,
+  medium: 768px,
+  large: 1025px,
+  x-large: 1280px,
+  sx-large: 1367px,
+  xx-large: 1600px,
+);
+
+// breakpoints
+$mobile: 767px;
+$tablet: 1024px;
+$laptop: 1366px;
+$desktop: 1920px;
+
+// layout
+// -----------------------------------------------------------------------------
+//$h100: var(--app-height);
+$h100: var(--app-height, 100vh);
+$dh100: var(--device-height, 100vh);
+$fh100: var(--full-height);
+
+$section-full: 100%;
+$section-lg: 1440px;
+$section-md: 1152px;
+$section-sm: 936px;
+$container-gutter: min(rem(80), 4.17vw);
+// [TODO] 220328 gutter-l, gutter-t 모두 안씀. 제거될 예정
+$container-gutter-l: min(rem(80), 3.3vw);
+$container-gutter-t: 3.2rem;
+
+$container-gutter-m: 2rem;
+
+$content-width: 91.66vw;
+
+$w-small: 360px;
+$vw-viewport: 375;
+
+$space-xxl: 128px;
+$space-xl: 96px;
+$space-lg: 64px;
+$space-md: 40px;
+$space-sm: 24px;
+$space-xs: 16px;
+
+$popup-zindex: 10000;
+
+$base-font-size: 10; // function rem()
+$font-list: (
+  // [filename]: ([font-family]: [weight])
+  HankookRegular: (Hankook, 400),
+  HankookMedium: (Hankook, 500),
+  HankookSemibold: (Hankook, 600),
+  HankookMainLight: (HankookMain, 300),
+  HankookMainRegular: (HankookMain, 400)
+);
+
+$font-main: "Hankook", sans-serif;
+$font-kr: "HankookMain", sans-serif;
+$font-sub: "Hankook", sans-serif; // [NOTE] 영어권이 아닌 경우 영문 폰트가 서브가 됨.
+$en: $font-sub;
+
+// color
+// -----------------------------------------------------------------------------
+
+// 폼 요소 테두리 색상
+$form-border-color: #d1d1d1;
+
+
+// 메인 컬러
+$color-primary: #fd6720;
+$color-primary-pale: #e96347;
+$color-primary-light: $color-primary-pale;
+$color-primary-deep: $color-primary;
+$color-primary-dark: #085e48;
+
+// 서브 컬러
+$color-secondary: #ed1a3b;
+$color-secondary-pale: $color-secondary;
+$color-secondary-light: $color-secondary;
+$color-secondary-deep: #c00e29;
+$color-secondary-dark: $color-secondary-deep;
+
+$brand: $color-primary;
+
+// full bg color
+$color-bg-gray: #fafafa;
+$color-bg-whitesmoke: #f2f2f2;
+$color-bg-black: #000;
+$color-bg-white: #fff;
+
+// duration
+$dur: 0.29s;

@@ -1,0 +1,9 @@
+// [NOTE] 아래 스타일이 없으면 스크롤 시 엘리먼트 렌더링이 늦는 오류가 있음
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;  
+}

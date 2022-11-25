@@ -1,0 +1,318 @@
+// [TODO] 각 언어로 옮겨질 수도 있음..
+
+.font_headline_1 {
+  font-size: rem(72);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+}
+
+.font_headline_2 {
+  font-size: rem(56);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.font_headline_3 {
+  font-size: rem(48);
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+}
+
+.font_headline_3_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(48);
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.03em;
+}
+
+.font_headline_4 {
+  font-size: rem(32);
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.015em;
+}
+
+.font_contents_title_1 {
+  font-size: rem(40);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.font_contents_title_1_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(40);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.font_contents_title_2 {
+  font-size: rem(28);
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.01em;
+}
+
+.font_contents_title_4{
+  font-size: rem(28);
+  font-weight: 300;
+  line-height: 1.29;
+  letter-spacing: -0.28px;
+}
+
+.font_banner {
+  font-size: rem(28);
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.01em;
+}
+
+.font_contents_title_2_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+.font_body_1 {
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: 1.36;
+  letter-spacing: -0.015em;
+}
+
+.font_body_1_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+
+.font_body_2 {
+  font-size: rem(18);
+  font-weight: 300;
+  line-height: 1.67;
+  letter-spacing: -0.01em;
+}
+
+.font_body_2_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(18);
+  font-weight: 300;
+  line-height: 1.67;
+  letter-spacing: -0.03em;
+}
+
+.font_body_3 {
+  font-size: rem(16);
+  font-weight: 300;
+  line-height: 1.63;
+  letter-spacing: -0.01em;
+}
+
+.font_body_3_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(16);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: -0.025em;
+}
+
+.font_caption_lg {
+  font-size: rem(16);
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+  color: #444;
+}
+
+.font_caption {
+  font-size: rem(14);
+  font-weight: 300;
+  line-height: 1.43;
+  color: #666;
+}
+
+.font_caption_main {
+  font-family: "HankookMain", sans-serif;
+  font-size: rem(14);
+  font-weight: 300;
+  line-height: 1.57;
+  letter-spacing: -0.02em;
+  color: #666;
+}
+
+.font_caption2_main{
+  font-size: rem(13);
+  font-weight: 300;
+  line-height: 1.57;
+  letter-spacing: -0.02em;
+  color: #666;
+}
+
+.font_caption_small{
+  font-size: rem(12);
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: -0.02em;
+}
+
+.font_component_title {
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+@media all and (max-width:$laptop){
+  .font_headline_1 {
+    font-size: rem(64);
+  }
+  .font_headline_2 {
+    font-size: rem(48);
+  }
+  .font_headline_3 {
+    font-size: rem(40);
+  }
+}
+
+@media all and (max-width:$tablet){
+  .font_headline_1 {
+    font-size: rem(48);
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+  }
+  
+  .font_headline_2 {
+    font-size: rem(28);
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+  }
+  
+  .font_headline_3 {
+    font-size: rem(24);
+    line-height: 1.33;
+    letter-spacing: -0.015em;
+  }
+  
+  .font_headline_3_main {
+    font-size: rem(24);
+    line-height: 1.33;
+    letter-spacing: -0.03em;
+  }
+  
+  .font_headline_4 {
+    font-size: rem(24);
+    line-height: 1.33;
+    letter-spacing: -0.015em;
+  }
+
+  .font_contents_title_1 {
+    font-size: rem(22);
+    line-height: 1.36;
+    letter-spacing: -0.01em;
+  }
+  
+  .font_contents_title_2 {
+    font-size: rem(20);
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+  }
+  
+  .font_contents_title_2_main {
+    font-size: rem(16);
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+  }
+
+  .font_contents_title_3{
+    font-size: rem(18);
+    font-weight: 300;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+  }
+
+  .font_contents_title_4{
+    font-size: rem(18);
+  }
+
+  .font_banner {
+    font-size: rem(16);
+  }
+  
+  .font_body_1_main {
+    font-size: rem(16);
+    line-height: 1.6;
+    letter-spacing: -0.025em;
+  }
+  
+  .font_body_2 {
+    font-size: rem(14);
+    line-height: 1.71;
+    letter-spacing: -0.005em;
+  }
+  
+  .font_body_2_main {
+    font-size: rem(14);
+    line-height: 1.71;
+    letter-spacing: -0.035em;
+  }
+  
+  .font_body_3 {
+    font-size: rem(13);
+    line-height: 1.69;
+    letter-spacing: -0.01em;
+  }
+  
+  .font_body_3_main {
+    font-size: rem(13);
+    line-height: 1.69;
+    letter-spacing: -0.035em;
+  }
+  
+  .font_caption {
+    font-size: rem(12);
+    line-height: 1.5;
+  }
+  
+  .font_caption_main {
+    font-size: rem(12);
+    line-height: 1.5;
+  }
+  
+  .font_component_title {
+    font-size: rem(16);
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+  }
+  
+  .font_caption2_main{
+    font-size: rem(11);
+    font-weight: 300;
+    line-height: 1.57;
+    letter-spacing: -0.02em;
+    color: #666;
+  }
+  .font_caption_small{
+    font-size: rem(11);
+    font-weight: normal;
+  }
+
+  .font_caption_lg {
+    font-size: rem(14);
+    color: #444;
+  }
+
+}
+
+@media screen and (max-width:$mobile) {
+  .font_headline_1 {
+    font-size: rem(40);
+  }
+}

@@ -1,5 +1,5 @@
 [
 
-  { "type":"common" ,"path": "/index.html", "component": "test" },
+  { "type":"common" ,"path": "/index.html", "component": "keyvisual-home-carousel" },
   { "type":"common" ,"path": "/index.html", "component": "test2" }
 ]

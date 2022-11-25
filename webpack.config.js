@@ -17,7 +17,11 @@ const utilPlugins = [
     new MiniCssExtractPlugin({
         filename: (pathData) => {
             let res;
-            res = './components/[name]/clientlibs/css/main.css';
+            if(pathData.chunk.name === 'clientlib-common') {
+                res = './assets/clientlib-common/css/main.css';
+            } else {
+                res = './components/[name]/clientlibs/css/main.css';
+            }
             return res;
         },
         chunkFilename: '[id].css',
@@ -26,6 +30,7 @@ const utilPlugins = [
 
     new CopyPlugin({
         patterns: [
+            { from: 'src/assets/clientlib-common/resources', to: 'assets/clientlib-common/resources' },
             { from: 'src/assets/clientlib-base/resources', to: 'assets/clientlib-base/resources' },
             { from: 'src/assets/clientlib-lang', to: 'assets/clientlib-lang' },
             { from: 'src/assets/clientlib-base/js/vendors.js', to: 'assets/clientlib-base/js/vendors.js' },
@@ -53,7 +58,9 @@ module.exports = {
         path: path.resolve(__dirname, './build'),
         filename: (pathData) => {
             let res;
-            if(pathData.chunk.name === 'vendors') {
+            if(pathData.chunk.name === 'clientlib-common') {
+                res = './assets/clientlib-common/js/main.js';
+            } else if(pathData.chunk.name === 'vendors') {
                 res = './assets/clientlib-base/js/[name].js';
             } else {
                 res = './components/[name]/clientlibs/js/main.js';
@@ -66,6 +73,12 @@ module.exports = {
         minimize: false,
     },
     externals: {
+        'jquery': 'jQuery',
+        'gsap': 'gsap',
+        'gsap/all': 'window',
+        'gsap/ScrollTrigger': 'window',
+        'locomotive-scroll': 'LocomotiveScroll',
+        'swiper': 'Swiper',
     },
     module: {
         rules: [

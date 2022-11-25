@@ -1,0 +1,488 @@
+.btn {
+  display: inline-block;
+  font-size: rem(14);
+  font-weight: 500;
+  padding: rem(5) 0;
+  font-family: 'HankookMain';
+
+  &--round {
+    position: relative;
+    color: #fff;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      width: rem(32);
+      height: rem(32);
+      margin-left: rem(12);
+      background-image: url("/assets/clientlib-base/resources/svg/w_arrow.svg");
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.05);
+      background-repeat: no-repeat;
+      background-size: rem(16) rem(16);
+      background-position: center;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    &.white{
+      &::after{
+        background-color: rgba(255,255,255,1);
+      }
+    }
+
+    @media all and (min-width: $tablet){
+      &:hover,
+      a:hover & {
+        &:after {
+          transform: translateX(rem(6));
+          // background-color: #fff;
+        }
+      }
+    }
+  }
+
+  // btn--round 필수
+  &--invert {
+    color: #000;
+  }
+
+  // btn--round 필수
+  &--download {
+      &:after {
+        background-image: url(/assets/clientlib-base/resources/svg/w_download-arrow-bn.svg) !important;
+        background-size: rem(32) rem(32);
+      }
+      &:hover,
+      a:hover & {
+        &:after {
+          transform: translateX(0);
+        }
+      }
+  }
+
+  // btn--round 필수
+  &--plus {
+    &:after {
+      background-image: url("/assets/clientlib-base/resources/svg/w_plus.svg");
+      // background-size: rem(12) rem(12);
+      // left: rem(6);
+    }
+    &:hover{
+      &::after{
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  // btn--round 필수
+  &--close {
+    &:after {
+      background-image: url("/assets/clientlib-base/resources/svg/c_close_mini.svg");
+      background-size: rem(16) rem(16);
+    }
+  }
+
+  &.btn--bg{
+    height: rem(38);
+    color: #fff;
+    font-size: rem(13);
+    line-height: rem(38);
+    padding: 0 rem(24);
+    border-radius: rem(20);
+    background-color: #000;
+    text-align: center;
+    min-width: rem(104);
+
+    &:after{
+      display: none;
+    }
+
+    &.btn--arrow{
+      &:after{
+        display: inline-block;
+        background-image: url("/assets/clientlib-base/resources/svg/w_arrow_white.svg");
+      }
+    }
+
+    @media all and (max-width: $tablet) {
+      min-width: rem(98);
+    }
+
+    &.bg-white {
+      color: #000;
+      background-color: #fff;
+      &:after{
+        background-image: url("/assets/clientlib-base/resources/svg/w_arrow.svg");
+      }
+    }
+  }
+
+  &--ghost{
+    height: rem(38);
+    color: #000;
+    font-size: rem(13);
+    line-height: rem(38);
+    padding: 0 rem(24);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: rem(20);
+  }
+
+  &--arrow {
+    position: relative;
+    font-size: rem(13);
+
+    &:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      width: rem(16);
+      height: rem(16);
+      background-image: url("/assets/clientlib-base/resources/svg/w_arrow.svg");
+      background-repeat: no-repeat;
+      background-size: rem(12) rem(12);
+      background-position: center;
+      margin-left: rem(4);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    &.white{
+      color: #fff;
+
+      &:after{
+        background-image: url("/assets/clientlib-base/resources/svg/w_arrow_white.svg");
+      }
+    }
+
+    @media all and (min-width: $tablet){
+      &:hover,
+      a:hover & {
+        &:after {
+          transform: translateX(rem(6));
+        }
+      }
+    }
+  }
+
+  &--play {
+    position: absolute;
+    bottom: rem(20);
+    right: rem(20);
+    width: rem(50);
+    height: rem(50);
+    border-radius: 50%;
+    background-color: rgba(17, 17, 17, 0.7);
+    background-repeat: no-repeat;
+    background-size: rem(24) rem(24);
+    background-position: center;
+    background-image: url(/assets/clientlib-base/resources/svg/w_play.svg);
+
+    &.is-play {
+      background-image: url(/assets/clientlib-base/resources/svg/w_pause.svg);
+    }
+  }
+
+  &--search {
+    position: absolute;
+    top: 50%;
+    right: rem(20);
+    transform: translate(0, -50%);
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+    background-image: url(/assets/clientlib-base/resources/svg/w_search.svg);
+    transition: background-color 0.2s;
+
+    @media all and (min-width: $tablet){
+      &:not(.gray):hover,
+      a:hover &:not(.gray) {
+        background-color: rgba(#000, 0.06);
+      }
+    }
+
+    &.gray {
+      background-color: rgba(#000, 0.06);
+    }
+  }
+
+  @include mq(large) {
+    font-size: rem(16);
+
+    &.btn--bg{
+      font-size: rem(14);
+      height: rem(40);
+      line-height: rem(40);
+    }
+  }
+
+  &--line{
+    // font-family: 'Hankook';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: rem(64);
+    color: #000;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    transition: color 0.3s, background 0.3s;
+  }
+
+  &--zoom{
+    width: rem(40);
+    height: rem(40);
+    font-size: 0;
+    border-radius: 50%;
+    background-color: rgba(17, 17, 17, 0.7);
+    background-repeat: no-repeat;
+    background-size: rem(24) rem(24);
+    background-position: center;
+    background-image: url(/assets/clientlib-base/resources/svg/m_zoom_in.svg);
+
+    &.out{
+      background-image: url(/assets/clientlib-base/resources/svg/m_zoom_out.svg);
+    }
+  }
+
+  &--refresh {
+    width: rem(40);
+    height: rem(40);
+    font-size: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.04);
+    background-repeat: no-repeat;
+    background-size: rem(24) rem(24);
+    background-position: center;
+    background-image: url(/assets/clientlib-base/resources/svg/c_refresh.svg);
+
+    @media all and (max-width: $tablet){
+      background-image: none;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+
+      &::before {
+        content: '';
+        position: relative;
+        top: rem(2);
+        display: inline-block;
+        height: rem(14);
+        width: rem(14);
+        margin-right: rem(10);
+        background: url(/assets/clientlib-local/resources/svg/ico_change_your_selection.svg) no-repeat 100%;
+      }
+
+      .btn__text {
+        font-size: rem(12);
+      }
+    }
+  }
+
+  &--back {
+    position: relative;
+    color: #000;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      width: rem(32);
+      height: rem(32);
+      margin-right: rem(12);
+      background-image: url("/assets/clientlib-base/resources/svg/w_arrow.svg");
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.05);
+      background-repeat: no-repeat;
+      background-size: rem(16) rem(16);
+      background-position: center;
+      transition: background-color 0.3s, transform 0.3s;
+      transform: rotateZ(180deg);
+    }
+
+    &::before{
+      background-color: rgba(255,255,255,1);
+    }
+
+    &.white{
+      color: #fff; 
+    }
+
+    @media all and (min-width: $tablet){
+      &:hover,
+      a:hover & {
+        &:before {
+          transform: rotateZ(180deg) translateX(rem(6));
+        }
+      }
+    }
+  }
+
+  &.search-area {
+    &::before {
+      content: '';
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      margin-right: 5px;
+      top: -2px;
+      background: url(/assets/clientlib-local/resources/svg/c_search_this_area.svg) no-repeat;
+      background-size: contain;
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+
+  @media all and (max-width: $tablet){
+    &--round{
+      &:after{
+        width: rem(24);
+        height: rem(24);
+        background-image: url("/assets/clientlib-base/resources/svg/m_arrow.svg");
+      }
+    }
+
+    &--download:after {
+      background-size: rem(24) rem(24);
+    }
+
+    &--play{
+      bottom: rem(12);
+      right: rem(12);
+      width: rem(40);
+      height: rem(40);
+    }
+
+    &--line{
+      height: rem(52);
+      margin-top: rem(48);
+    }
+
+    &--close {
+      &:after {
+        background-image: url("/assets/clientlib-base/resources/svg/c_close_mini.svg");
+      }
+    }
+    &--plus{
+      &:after{
+        background-image: url("/assets/clientlib-base/resources/svg/m_plus.svg");
+      }
+    }
+  }
+}
+
+.ico-question{
+  width: rem(24);
+  height: rem(24);
+  font-size: 0;
+  border-radius: 50%;
+  background: url('/assets/clientlib-local/resources/svg/icon-question.svg') no-repeat 50% 50% #aaa;
+  background-size: 16px;
+}
+
+.btn-close_search{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url('/assets/clientlib-local/resources/svg/icon-close.svg') no-repeat 50% 50% #f0f0f0;
+  background-size: 16px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+
+// rtl
+
+
+
+
+html[dir="rtl"]{
+
+  // a{
+  //   &:hover{
+  //       .btn--round ::after{
+  //         transform: translateX(-6);
+  //       }
+  //   }
+  // }
+
+  @media all and (min-width:$tablet){
+    .btn--round:hover::after, a:hover .btn--round::after{
+      transform: translateX(rem(-6)) rotate(-180deg);
+    }
+
+    .btn--arrow:hover:after, a:hover .btn--arrow:after {
+      transform: translateX(rem(-6)) rotate(-180deg);
+    }
+    
+    .btn--back:hover::before, a:hover .btn--back::before{
+      transform: translateX(rem(6)) rotateZ(0);
+      
+    }
+  }
+
+
+  .btn--refresh::before{
+    @media all and (max-width:$tablet){
+      margin-right: unset;
+      margin-left: rem(10);
+    }
+  }
+
+  .btn--back::before{
+    transform: rotateZ(0);
+    margin-right: unset;
+    margin-left: rem(12);
+  }
+
+  .btn--search{
+    right: unset;
+    left: rem(20);
+  }
+
+  .btn{
+    &:after{
+      margin-left: unset;
+      margin-right: rem(12);
+      transform: rotate(-180deg);
+      
+    }
+
+    @media all and (min-width: $tablet){
+      &:hover,
+      a:hover & {
+        &:after {
+          transform: rotate(-180deg) translateX(rem(6));
+        }
+      }
+    }
+
+    &--plus{
+      &:hover::after{
+        transform: rotate(-270deg);
+      }
+    }
+    &--arrow::after{
+      margin-right: rem(4);
+    }
+
+    &--play{
+      right: unset;
+      left: rem(20);
+    }
+
+    &.search-area::before{
+      margin-right: unset;
+      margin-left : rem(5);
+    }
+
+  }
+
+  .ico-question{
+    transform: scaleX(-1);
+  }
+}

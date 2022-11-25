@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HandlebarsHelper = require('./handlebars-helper');
 const fs = require('fs');
-const codingmap = require('../src/buildmap.json');
+const buildmap = require('../src/buildmap.json');
 
 // const log = require('fancy-log');
 
@@ -73,7 +73,7 @@ const generatePages = function(pageOpt) {
   
   const pages = [];
   
-  let path = groupBy(codingmap, 'path');
+  let path = groupBy(buildmap, 'path');
   
   for (const key in path) {
     // if (Object.hasOwnProperty.call(object, key)) {

@@ -71,6 +71,10 @@ const entry = entryComponents.reduce(function(obj, el) {
   ];
   return obj;
 }, {
+    'clientlib-common': [
+    './src/assets/clientlib-common/js/main.js',
+    './src/assets/clientlib-common/scss/main.scss',
+    ],
   'system': [
     './src/index.js',
     './src/assets/clientlib-base/scss/buildmap.scss'

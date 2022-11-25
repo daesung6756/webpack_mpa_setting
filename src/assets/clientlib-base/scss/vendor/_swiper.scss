@@ -1,0 +1,214 @@
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  width: rem(52);
+  height: rem(52);
+  
+  @media all and (max-width:$tablet){
+    width: rem(46);
+    height: rem(46);
+
+  }
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.26s;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(24);
+    height: rem(24);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    @media all and (max-width:$tablet){
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+
+  &--gray {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not(.swiper-button-disabled) {
+      &::before {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+
+.swiper-button-disabled {
+  &::after {
+    opacity: 0.4;
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    background-image: url('/assets/clientlib-base/resources/svg/w_prev.svg');
+    @media all and (max-width:$tablet){
+      background-image: url('/assets/clientlib-base/resources/svg/m_prev.svg');
+    }
+  }
+}
+
+.swiper-button-next {
+  &::after {
+    background-image: url('/assets/clientlib-base/resources/svg/w_next.svg');
+    @media all and (max-width:$tablet){
+      background-image: url('/assets/clientlib-base/resources/svg/m_next.svg');
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 10;
+}
+.swiper-button-prev {
+  left: rem(40);
+}
+.swiper-button-next {
+  right: rem(40);
+}
+
+.swiper-nav {
+  & {
+    display: flex;
+
+    * + * {
+      margin-left: rem(10);
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+}
+
+.swiper-pagination {
+
+  &.swiper-pagination-horizontal {
+    max-width: rem(300);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-bullet {
+    background-color: #ffffff;
+    opacity: 0.2;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+
+  &.is-dark {
+    .swiper-pagination-bullet {
+      background-color: #000;
+    }
+  }
+}
+
+.swiper-fade .swiper-slide {
+  transition-property: opacity;
+}
+
+.swiper-scrollbar {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+  height: rem(1);
+  margin: rem(88) auto 0;
+  background: rgba(0, 0, 0, 0.15);
+  
+  @media all and (max-width: $tablet){
+    margin: rem(48) auto 0;
+  }
+
+  .swiper-scrollbar-drag {
+    position: relative;
+    z-index: 2;
+    width: rem(360);
+    height: 100%;
+    background: #000;
+    border-radius: 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        padding: rem(20) 0;
+        transform: translateY(-50%);
+        cursor: grab;
+        pointer-events: all;
+    }
+  }
+}
+
+
+
+//rtl
+
+
+html[dir="rtl"]{
+
+  .swiper-button-prev{
+    left: unset;
+    right: rem(40);
+    
+    &::after{
+      transform: translate(-50%, -50%) scaleX(-1);
+    }
+  }
+  .swiper-button-next{
+    left: rem(40);
+    right: unset;
+    
+    &::after{
+      transform: translate(-50%, -50%) scaleX(-1);
+    }
+  }
+
+  .swiper-nav{
+    .swiper-button-prev, .swiper-button-next{
+      left: auto;
+      right: auto;
+    }
+    
+  }
+
+  .swiper-nav * + * {
+    margin-left: unset;
+    margin-right: rem(10);
+  }
+
+
+}

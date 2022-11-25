@@ -1,0 +1,23 @@
+@import './var';
+
+// -----------------------------------------------------------------------------
+// Function
+// -----------------------------------------------------------------------------
+
+@function rem($px) {
+  @return #{$px / $base-font-size}rem;
+}
+
+@function em($em, $context) {
+  @return #{$em / $context}em;
+}
+
+@function gvw($px) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($px / $vw-context) * 1vw;
+}
+
+@function gvwt($px) {
+  $vw-context: (390 * 0.01) * 1px;
+  @return ($px / $vw-context) * 1vw;
+}

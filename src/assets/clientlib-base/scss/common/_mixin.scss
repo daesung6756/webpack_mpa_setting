@@ -1,0 +1,222 @@
+// -----------------------------------------------------------------------------
+// Mixin
+// -----------------------------------------------------------------------------
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin full-pos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin center-pos-xy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-pos-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-pos-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin break-word {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+@mixin horizon-scroll {
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  &.is-overflow {
+      justify-content: flex-start;
+      padding-left: rem(20);
+      // right end margin
+      &::after {
+          content: '';
+          flex: 0 0 rem(20);
+      }
+  }
+
+  // Hide scrollbar
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /*** 태블릿 ****/
+  // @media all and (min-width: $break-point-tablet) {
+  //     &.is-overflow {
+  //         padding-left: get-vw-t(20px);
+  //         &::after {
+  //             flex: 0 0 get-vw-t(20px);
+  //         }
+  //     }
+  // }
+}
+
+@mixin scroll-style {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    
+  }
+  
+  &::-webkit-scrollbar-thumb {
+      background-color: rgba(#fff, 0.3);
+      border-radius: 4px;
+      height: 12px;
+  }
+}
+
+@mixin bg-img-center {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin max-1920 {
+  @media all and (min-width: $desktop) {
+    max-width: $desktop;
+    margin: 0 auto;
+  }
+
+  // $hugesize: calc(#{$desktop} + #{rem(64)} * 2);
+  $maxsize: calc(#{$desktop} + 64px * 2);
+  @media all and (min-width: $maxsize) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@mixin left-border-text($borderWidth,$padding,$color){
+  position: relative;
+  padding-left: $padding;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: $borderWidth;
+    height: 80%;
+    background-color: $color;
+  }
+}
+
+@mixin divide-line($color,$isWide){
+  position: relative;
+  display: inline-block;
+
+  @if $isWide == false{
+    padding-right: rem(16);
+    
+    @media all and (max-width: $mobile) {
+      padding-right: rem(10);
+    }
+  }
+  @else{
+    padding-right: rem(25);
+  
+    @media all and (max-width: $tablet) {
+      padding-right: rem(15);
+    }
+  }
+  
+  &::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:.1rem;height:1.2rem;
+    @if $color != ""{
+      background:$color;
+    }
+    @else{
+      background:#00000045;
+    }
+
+    @if $isWide == false{
+      right:rem(6);
+      @media all and (max-width: $mobile) {
+        right:rem(4)
+      }
+    }
+    @else{
+      right:rem(12);
+      @media all and (max-width: $tablet) {
+        right:rem(7)
+      }
+    }
+  }
+  
+
+  
+  &:first-of-type{
+    @if $isWide == false{
+      padding-right: rem(14);
+      
+      @media all and (max-width: $mobile) {
+        padding-right: rem(8);
+      }
+  
+      &::after{
+        right:rem(5);
+    
+        @media all and (max-width: $mobile) {
+          right:rem(2)
+        }
+      }
+    }
+    @else{
+      padding-right: rem(25);
+    
+      @media all and (max-width: $tablet) {
+        padding-right: rem(15);
+      }
+  
+      &::after{
+        right:rem(12);
+        @media all and (max-width: $tablet) {
+          right:rem(7)
+        }
+      }
+    }
+  }
+  &:last-of-type{
+    padding-right: 0;
+    &::after{display:none}
+  }
+}
